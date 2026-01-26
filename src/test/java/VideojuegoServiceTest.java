@@ -52,6 +52,13 @@ public class VideojuegoServiceTest {
     }
 
     @Test
+    void registrarJuego_conTituloYHorasNegativo() {
+        assertThrows(IllegalArgumentException.class, () ->
+                service.registrarJuego("Sonic", "PC", -20, 80)
+        );
+    }
+
+    @Test
     void registrarJuego_tituloVacio() {
         assertThrows(IllegalArgumentException.class, () ->
                 service.registrarJuego("", "PC", 10, 80)
@@ -75,4 +82,3 @@ public class VideojuegoServiceTest {
         assertEquals("Elden Ring", resultado.getTitulo());
     }
 }
-

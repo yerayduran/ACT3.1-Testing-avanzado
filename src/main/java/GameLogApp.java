@@ -11,15 +11,14 @@ public class GameLogApp {
         servicio.registrarJuego("Super Mario", "Nintendo", 10, 95);
         servicio.registrarJuego("Candy Crush", "Movil", 5, 40);
 
-
         // El repositorio tiene capacidad para 5 juegos, pero solo hemos metido 2.
         // Los otros 3 huecos son NULL.
 
         // 3. INTENTO DE CÁLCULO (AQUÍ FALLARÁ)
-        // El alumno debe poner un BREAKPOINT aquí y entrar con F7/F8 
+        // El alumno debe poner un BREAKPOINT aquí y entrar con F7/F8
         // para ver por qué explota al sumar las horas.
         System.out.println("Calculando estadísticas...");
-        
+
         try {
             int totalHoras = servicio.calcularTotalHoras();
             System.out.println("Total horas jugadas: " + totalHoras);
@@ -34,7 +33,7 @@ public class GameLogApp {
 // --- Implementación simple para poder ejecutar el código sin Mockito ---
 class RepositorioEnMemoria implements VideojuegoRepository {
     // Array fijo simulando la tabla de base de datos
-    private Videojuego[] baseDeDatos = new Videojuego[5]; 
+    private Videojuego[] baseDeDatos = new Videojuego[5];
     private int contador = 0;
 
     @Override

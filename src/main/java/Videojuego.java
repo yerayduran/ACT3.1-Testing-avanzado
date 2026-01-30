@@ -16,7 +16,7 @@ public class Videojuego {
     public String getPlataforma() { return plataforma; }
     public int getHorasJugadas() { return horasJugadas; }
     public int getPuntuacion() { return puntuacion; }
-    
+
     public void setPuntuacion(int puntuacion) { this.puntuacion = puntuacion; }
 
     @Override
